@@ -2,16 +2,37 @@ const form = document.getElementById('myForm')
 const p_text_1 = document.getElementById('txt')
 const but = document.getElementById('but')
 const huf = document.querySelector('.huf')
+const but_delete = document.getElementById('del')
+const hist = document.getElementById('history')
+const but_hist = document.getElementById('but_history')
+
 var loading_count = 0
 const s = document.documentElement.outerHTML.split('\n')
 
 let d = 0
+let massiv_of_history = [];
 
+
+but_delete.addEventListener('click', function() {
+    massiv_of_history = []
+    sessionStorage.clear()
+    location.reload()
+})
+
+if (sessionStorage.getItem("history") != null) {
+    massiv_of_history = JSON.parse(sessionStorage.getItem("history"))
+}
+console.log(massiv_of_history)
 
 form.addEventListener("submit", function forms(event) {
     event.preventDefault()
 
     const val = form.querySelector('[id = "inp"]').value
+
+    if (val != ''){
+        massiv_of_history.push(val)
+    }
+    sessionStorage.setItem("history", JSON.stringify(massiv_of_history))
 
     d = huffman(val)
 
@@ -20,11 +41,32 @@ form.addEventListener("submit", function forms(event) {
     p_1.textContent = d
     p_text_1.textContent = s.length
 
+
     huf.appendChild(p_1)
+
 })
 
+but_hist.addEventListener('click', function() {
+    hist.textContent = ''
+    hist.style.display = 'grid'
+    for (i in massiv_of_history) {
+        let help = document.createElement('p')
+        help.textContent = (Number(i)+1)+'.'+' '+massiv_of_history[i]+"\n"
+        help.style.borderBottom = 'solid'
+        help.style.borderWidth= '1px'
+        hist.appendChild(help)
+    }
+
+    if (hist.textContent == '') {
+        hist.style.display = 'none'
+    }
+})
+
+
+
+
 if (document.readyState == 'loading') {
-    console.log('loading', s.length)
+    console.log(JSON.stringify(massiv_of_history))
 } 
 
 

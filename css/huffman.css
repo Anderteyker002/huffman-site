@@ -67,3 +67,11 @@ header {
 .but {
     padding: 5px;
 }
+
+.hist {
+    display: none;
+    border: solid;
+    border-width: 2px;
+    border-color: #5d001e;
+    max-width: 20%;
+}
