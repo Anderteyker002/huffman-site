@@ -2,7 +2,7 @@ const str_original = '4217641729 74127748912789471 78917274'
 const str_changed_orig = str_original.toLowerCase()
 const str_changed_orig2 = str_changed_orig.replace(/ /g, "_")
 
-let obj = {}
+let obj= {}
 let count_symbol = 0
 let dict_unification = {}
 
