@@ -9,7 +9,7 @@ const h = screen.height
 console.log(body.style)
 
 if (document.readyState == 'loading') {
-    body.style.paddingTop = header + 'px'
+    body.style.paddingTop = header + 5 + 'px'
     console.log(body.style)
 }
 
