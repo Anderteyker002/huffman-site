@@ -1,7 +1,7 @@
 const text_1 = document.getElementById('text_1')
 const text_3 = document.getElementById('text_3')
 const a_1 = document.getElementById('a_1')
-let a_1_href = a_1.getAttribute('href')
+
 
 const div_1 = document.getElementById('div_1')
 const div_2 = document.getElementById('div_2')
