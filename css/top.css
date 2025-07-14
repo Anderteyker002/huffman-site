@@ -15,6 +15,11 @@ a {
     animation: color_text 3s infinite;
 }
 
+header {
+    display: none;
+    transition: all .5s;
+}
+
 
 main {
     width: 100%;
@@ -24,7 +29,7 @@ main {
 }
 
 .div_1 {
-    min-width: 1000px;
+    display: grid;
     clip-path: xywh(0% 0 100% 100% round 0 0);
     position: relative;
     height: 99%;
@@ -55,6 +60,15 @@ main {
     font-weight: bold;
     font-size: 12vh;
     padding: 10px;
+    border-width: 2px;
+    transition: all 0.1s;
+}
+
+.text_1_1 {
+    font-size: 90%;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
     border-width: 2px;
     transition: all 0.1s;
 }
@@ -166,4 +180,34 @@ main {
     width: 95%;
     margin: 5%;
     
+}
+
+@media (max-width: 1450px) {
+    header {
+        display: block;
+        height:8%; 
+        background-color: #e3e2df;
+        align-content: center;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: #9a1750;
+        text-align: center;
+    }
+
+    header p {
+        padding: 0;
+        margin: 0;
+        color: #9a1750;
+        font-weight: bold;
+        font-size: 200%;
+        font-family: 'Specific Sans Font', Helvetica, Arial, sans-serif; 
+    }
+
+    .div_1 {
+        height: 92%;
+    }
+
+    .text_1 {
+        font-size: 230%;
+    }
 }
