@@ -25,7 +25,7 @@ main {
 
 .div_1 {
     min-width: 1000px;
-
+    clip-path: xywh(0% 0 100% 100% round 0 0);
     position: relative;
     height: 99%;
     width: 100%;
