@@ -17,15 +17,16 @@ let flag = true
 if (document.readyState == 'loading') {
     if (w <= 1450) {
         flag = false
+        
         a_1.setAttribute('href', '#123')
         div_2.style.display = 'none'
         div_1_1.setAttribute('class', 'text_1_1')
+
         div_1_2.setAttribute('class', 'text_1_1')
         div_1_2.style.textDecoration = 'underline #9a1750'
         div_1_2.style.fontWeight = '100'
         div_1_2.setAttribute('href', './base.html')
-    //  div_1_2.style.top = h+'px'
-    //  div_1_1.style.top = h+'px'
+
         div_1.appendChild(div_1_1)
         div_1.appendChild(div_1_2)
     }

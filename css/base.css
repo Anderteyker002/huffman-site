@@ -156,7 +156,7 @@ header {
     [class*="__container"] {
         max-width: 1170px;
         margin: 15px auto;
-        padding: 0 15px; /* отступы по бокам на мобильных устройствах */
+        padding: 0 15px;
     }
 
 }
@@ -165,7 +165,7 @@ header {
     [class*="__container"] {
         max-width: 900px;
         margin: 15px auto;
-        padding: 0 15px; /* отступы по бокам на мобильных устройствах */
+        padding: 0 15px;
     }
 
 }
