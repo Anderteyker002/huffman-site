@@ -6,6 +6,39 @@ const but_delete = document.getElementById('del')
 const hist = document.getElementById('history')
 const but_hist = document.getElementById('but_history')
 
+const butt = document.getElementById('butt')
+const schet = document.getElementById('schet')
+const schet2 = document.getElementById('schet2')
+const schet3 = document.getElementById('schet3')
+let flagg = true
+
+butt.addEventListener('click', function() {
+    if (flagg) {
+        flagg = false
+        id = setInterval(function() {
+            schet.textContent = Number(schet.textContent)+1
+            if (Number(schet.textContent) == 60) {
+                schet.textContent = 0
+                schet2.textContent = Number(schet2.textContent) + 1
+                if (Number(schet2.textContent) == 60) {
+                    schet2.textContent = 0
+                    schet3.textContent = Number(schet3.textContent) + 1
+                }
+        }
+
+        }, 1000)
+    } else {
+        flagg = true
+        clearInterval(id)
+    }
+})
+
+butt.addEventListener('mouseout', function() {
+    schet.textContent = schet.textContent
+    schet2.textContent = schet2.textContent
+    schet3.textContent = schet3.textContent
+})
+
 var loading_count = 0
 const s = document.documentElement.outerHTML.split('\n')
 

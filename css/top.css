@@ -31,11 +31,10 @@ main {
 .div_1 {
     display: grid;
     position: relative;
-    height: 99%;
+    height: 100%;
     width: 100%;
     align-content: center;
-    justify-content: center;
-    align-self: center;
+
     opacity: 0;
     animation: opac 2s forwards;
     font-family: 'Specific Sans Font', Helvetica, Arial, sans-serif; 
@@ -68,6 +67,7 @@ main {
 }
 
 .text_1_1 {
+    width: 100%;
     text-align: center;
     position: relative;
     font-weight: bold;
@@ -135,6 +135,9 @@ main {
 
     .div_1 {
         height: 92%;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
     }
 
     .text_1 {
