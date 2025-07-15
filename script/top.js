@@ -5,32 +5,39 @@ const a_1 = document.getElementById('a_1')
 
 const div_1 = document.getElementById('div_1')
 const div_2 = document.getElementById('div_2')
-const div_1_1 = document.createElement('p')
-const div_1_2 = document.createElement('a')
-div_1_1.innerHTML = 'Программа, которая сжимает строку, вводимую пользователем, по алгоритму сжатия Хаффмана'
-div_1_2.innerHTML = 'Перейти на сайт'
+const div_text = document.createElement('p')
+const div_but = document.createElement('button')
+const div_but_p = document.createElement('p')
+div_but_p.appendChild(div_but)
+
+div_text.innerHTML = 'Программа, которая сжимает строку, вводимую пользователем, по алгоритму сжатия Хаффмана'
+div_but.innerHTML = 'Перейти на сайт'
 
 const w = screen.width
 const h = screen.height
 let flag = true
+let flag_to_clip = true
 
 if (document.readyState == 'loading') {
     if (w <= 1450) {
         flag = false
         
-        a_1.setAttribute('href', '#123')
+        a_1.removeAttribute('href')
         div_2.style.display = 'none'
-        div_1_1.setAttribute('class', 'text_1_1')
+        div_text.setAttribute('class', 'text_1_1')
 
-        div_1_2.setAttribute('class', 'text_1_1')
-        div_1_2.style.textDecoration = 'underline #9a1750'
-        div_1_2.style.fontWeight = '100'
-        div_1_2.setAttribute('href', './base.html')
+        div_but.setAttribute('class', 'but_index')
+        div_but_p.setAttribute('class', 'but_div')
 
-        div_1.appendChild(div_1_1)
-        div_1.appendChild(div_1_2)
+        div_1.appendChild(div_text)
+        div_1.appendChild(div_but_p)
     }
 }
+
+
+div_but.addEventListener('click', function() {
+    window.location.href = './base.html'
+})
 
 
 text_1.addEventListener('mouseover', function(event){

@@ -30,11 +30,12 @@ main {
 
 .div_1 {
     display: grid;
-    clip-path: xywh(0% 0 100% 100% round 0 0);
     position: relative;
     height: 99%;
     width: 100%;
     align-content: center;
+    justify-content: center;
+    align-self: center;
     opacity: 0;
     animation: opac 2s forwards;
     font-family: 'Specific Sans Font', Helvetica, Arial, sans-serif; 
@@ -55,17 +56,18 @@ main {
 }
 
 .text_1 {
+    clip-path: xywh(-100% 0 100% 100% round 0 0);
     text-align: center;
     position: relative;
     font-weight: bold;
     font-size: 12vh;
     padding: 10px;
     border-width: 2px;
-    transition: all 0.1s;
+    transition: all 0.2s;
+    animation: opac_text_1 3s forwards;
 }
 
 .text_1_1 {
-    font-size: 90%;
     text-align: center;
     position: relative;
     font-weight: bold;
@@ -73,93 +75,22 @@ main {
     transition: all 0.1s;
 }
 
+@keyframes opac_text_1 {
+    from {
+        clip-path: xywh(-100% 0 100% 100% round 0 0);
+    }
+
+    to {
+        clip-path: xywh(0% 0 100% 100% round 0 0);
+    }
+}
+
 @keyframes opac {
-    0% {
+    from {
         opacity: 0;
     }
 
-
-    5% {
-        opacity: 0.05;
-    }
-
-    10% {
-        opacity: 0.1;
-    }
-
-    15% {
-        opacity: 0.15;
-    }
-
-    20% {
-        opacity: 0.2;
-    }
-
-    25% {
-        opacity: 0.25;
-    }
-
-    30% {
-        opacity: 0.3;
-    }
-
-    35% {
-        opacity: 0.35;
-    }
-
-    40% {
-        opacity: 0.4;
-    }
-
-    45% {
-        opacity: 0.45;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    55% {
-        opacity: 0.55;
-    }
-
-    60% {
-        opacity: 0.6;
-    }
-
-    65% {
-        opacity: 0.65;
-    }
-
-    70% {
-        opacity: 0.7;
-    }
-
-    75% {
-        opacity: 0.75;
-    }
-
-    80% {
-        opacity: 0.8;
-    }
-
-
-    85% {
-        opacity: 0.85;
-    }
-
-
-    90% {
-        opacity: 0.9;
-    }
-
-
-    95% {
-        opacity: 0.95;
-    }
-
-
-    100% {
+    to {
         opacity: 1;
     }
 }
@@ -209,4 +140,40 @@ main {
     .text_1 {
         font-size: 230%;
     }
+}
+
+button {
+    border: none;
+}
+
+.but_index {
+    position: relative;
+    text-align: center;
+    top: 0;
+    left: 0;
+
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+
+    box-shadow: -3px 3px black;
+    background-color: #9a1750;
+    border-radius: 10px;
+    
+    color: #e3e2df;
+    font-family: 'Specific Sans Font', Helvetica, Arial, sans-serif;
+    font-weight: bold; 
+
+    transition: all .5s;
+}
+
+.but_index:active {
+    box-shadow: 0 0 black;
+    top: 3px;
+    left: -3px;
+}
+
+
+.but_div {
+    text-align: center;
 }
